@@ -1,19 +1,19 @@
 ---
-description: After editing site files, commit and push changes to GitHub
+description: After editing site files, commit and push to GitHub and confirm
 globs: index.html,*.html,*.css,*.js
 alwaysApply: true
 ---
 
 # Auto-push to GitHub
 
-After making any substantive edits to the project (HTML, CSS, JS, content, or config):
+After **every** substantive edit to the project (HTML, CSS, JS, content, or config):
 
-1. Run in project root (`ии`):  
-   `git add -A`  
-   `git status` (to confirm what will be committed)
-2. Commit with a short message describing the change, e.g.:  
-   `git commit -m "Add FAQ section"` or `git commit -m "Fix hero layout"`
-3. Push to origin:  
+1. In project root (`ии`):  
+   `git add -A` then `git status` (confirm what will be committed)
+2. Commit with a short, clear message:  
+   `git commit -m "Description of change"`
+3. Push:  
    `git push origin main`
+4. **Confirm** the push succeeded (e.g. output shows `main -> main` or run `git status` and see "Your branch is up to date with 'origin/main'").
 
-Use a single commit per logical change; avoid committing unrelated edits in one message. If the user only asked for analysis or no files were changed, skip git steps.
+One commit per logical change. If the user only asked for analysis or no files were changed, skip git. If you made edits, always run the push and confirm — do not finish the task without pushing to GitHub.
