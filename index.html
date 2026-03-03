@@ -320,14 +320,23 @@
     .casino-features li { padding: 0.35rem 0; font-size: 0.9rem; color: var(--text-muted); border-bottom: 1px solid var(--border); }
     .casino-features li:last-child { border-bottom: none; }
 
-    .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg-card); }
+    .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); background: var(--bg-card); -webkit-overflow-scrolling: touch; }
+    .table-wrap .scroll-hint { display: none; text-align: center; font-size: 0.85rem; color: var(--text-muted); padding: 0.5rem 1rem; border-top: 1px solid var(--border); }
+    @media (max-width: 768px) { .table-wrap .scroll-hint { display: block; } }
     .comparison-table { width: 100%; border-collapse: collapse; min-width: 600px; }
     .comparison-table th, .comparison-table td { padding: 1rem 1.25rem; text-align: left; border-bottom: 1px solid var(--border); }
     .comparison-table th { background: var(--bg-elevated); font-weight: 600; color: var(--accent-gold); }
+    .comparison-table th:first-child { position: sticky; left: 0; z-index: 2; background: var(--bg-elevated); box-shadow: 4px 0 8px rgba(0,0,0,0.2); }
+    .comparison-table tbody tr:nth-child(even) td { background: rgba(0, 0, 0, 0.12); }
+    .comparison-table tbody tr:nth-child(even) td:first-child { background: var(--bg-card); }
+    .comparison-table td:first-child { position: sticky; left: 0; z-index: 1; background: var(--bg-card); font-weight: 500; box-shadow: 4px 0 8px rgba(0,0,0,0.15); }
+    .comparison-table tbody tr:nth-child(even) td:first-child { background: rgba(0, 0, 0, 0.18); }
     .comparison-table tr:last-child td { border-bottom: none; }
-    .comparison-table tr:hover td { background: rgba(88, 166, 255, 0.05); }
+    .comparison-table tbody tr:hover td { background: rgba(88, 166, 255, 0.08); }
+    .comparison-table tbody tr:hover td:first-child { background: rgba(88, 166, 255, 0.12); }
     .comparison-table .yes { color: #3fb950; }
     .comparison-table .rating-num { color: var(--accent-gold); font-weight: 600; }
+    .comparison-intro { text-align: center; color: var(--text-muted); max-width: 560px; margin: 0 auto 1.5rem; font-size: 0.95rem; line-height: 1.5; }
 
     .review-block {
       background: var(--bg-card);
@@ -715,15 +724,17 @@
 
     <section id="comparison" aria-labelledby="comparison-heading">
       <h2 id="comparison-heading">Casino <span class="accent">Comparison</span></h2>
+      <p class="comparison-intro">Compare welcome bonuses, licenses, mobile support, and ratings at a glance. Links lead to external review pages.</p>
       <div class="table-wrap fade-in">
         <table class="comparison-table" role="table">
-          <caption class="visually-hidden">Comparison of top online casinos: welcome bonus, license, mobile support, and rating.</caption>
+          <caption class="visually-hidden">Comparison of top online casinos: welcome bonus, license, payments, mobile support, and rating.</caption>
           <thead>
             <tr>
               <th scope="col">Casino</th>
               <th scope="col">Welcome Bonus</th>
               <th scope="col">License</th>
-              <th scope="col">Mobile Support</th>
+              <th scope="col">Payments</th>
+              <th scope="col">Mobile</th>
               <th scope="col">Rating</th>
             </tr>
           </thead>
@@ -732,6 +743,7 @@
               <td><a href="https://ludios-casino.com" target="_blank" rel="noopener noreferrer">Ludios</a></td>
               <td>Welcome package (see review)</td>
               <td>MGA / EU</td>
+              <td>Card, e-wallets, bank</td>
               <td class="yes">Yes</td>
               <td class="rating-num">4.8</td>
             </tr>
@@ -739,6 +751,7 @@
               <td><a href="https://blazebet777.com" target="_blank" rel="noopener noreferrer">Blazebet</a></td>
               <td>See review</td>
               <td>Curacao / EU</td>
+              <td>Visa, Mastercard, e-wallets</td>
               <td class="yes">Yes</td>
               <td class="rating-num">4.7</td>
             </tr>
@@ -746,6 +759,7 @@
               <td><a href="https://gg.bet/uk-ua/casino" target="_blank" rel="noopener noreferrer">GG.BET</a></td>
               <td>Package (see review)</td>
               <td>MGA</td>
+              <td>Multiple options</td>
               <td class="yes">Yes</td>
               <td class="rating-num">4.6</td>
             </tr>
@@ -753,6 +767,7 @@
               <td><a href="https://spinbetter.com/ru" target="_blank" rel="noopener noreferrer">Spinbetter</a></td>
               <td>Welcome package</td>
               <td>Curacao</td>
+              <td>Card, e-wallets</td>
               <td class="yes">Yes</td>
               <td class="rating-num">4.5</td>
             </tr>
@@ -760,6 +775,7 @@
               <td><a href="https://nvcasino.games/ru/" target="_blank" rel="noopener noreferrer">NV Casino</a></td>
               <td>Package (see review)</td>
               <td>MGA</td>
+              <td>Bank, e-wallets</td>
               <td class="yes">Yes</td>
               <td class="rating-num">4.4</td>
             </tr>
@@ -767,6 +783,7 @@
               <td><a href="https://hitnspin.com/en/login" target="_blank" rel="noopener noreferrer">Hitnspin</a></td>
               <td>See review</td>
               <td>Curacao</td>
+              <td>Card, e-wallets</td>
               <td class="yes">Yes</td>
               <td class="rating-num">4.3</td>
             </tr>
@@ -774,6 +791,7 @@
               <td><a href="https://rollingslots.com/en" target="_blank" rel="noopener noreferrer">Rollingslots</a></td>
               <td>Free spins (see review)</td>
               <td>MGA</td>
+              <td>Card, e-wallets</td>
               <td class="yes">Yes</td>
               <td class="rating-num">4.3</td>
             </tr>
@@ -781,6 +799,7 @@
               <td><a href="https://verdecasino.com/en" target="_blank" rel="noopener noreferrer">Verde</a></td>
               <td>Package (see review)</td>
               <td>Curacao / EU</td>
+              <td>Card, e-wallets</td>
               <td class="yes">Yes</td>
               <td class="rating-num">4.2</td>
             </tr>
@@ -788,11 +807,13 @@
               <td><a href="https://greenluck.casino" target="_blank" rel="noopener noreferrer">Greenluck</a></td>
               <td>See review</td>
               <td>MGA</td>
+              <td>Card, e-wallets</td>
               <td class="yes">Yes</td>
               <td class="rating-num">4.2</td>
             </tr>
           </tbody>
         </table>
+        <p class="scroll-hint" aria-hidden="true">← Swipe to see all columns →</p>
       </div>
     </section>
 
