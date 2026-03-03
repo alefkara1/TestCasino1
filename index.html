@@ -186,39 +186,46 @@
     .slot-reels-bg {
       position: fixed;
       inset: 0;
+      width: 100%;
+      min-height: 100%;
       z-index: 0;
       pointer-events: none;
       display: flex;
-      justify-content: center;
+      justify-content: stretch;
       align-items: stretch;
-      gap: 2vw;
-      padding: 0 5%;
-      opacity: 0.1;
+      gap: 0;
+      padding: 0;
+      opacity: 0.12;
     }
     .reel-column {
-      width: clamp(40px, 8vw, 70px);
-      max-width: 70px;
+      flex: 1;
+      min-width: 0;
       overflow: hidden;
-      border-radius: 8px;
-      background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(201,162,39,0.08) 50%, rgba(0,0,0,0.4) 100%);
-      box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
-      flex-shrink: 0;
+      border-radius: 0;
+      background: linear-gradient(90deg, rgba(0,0,0,0.35) 0%, rgba(201,162,39,0.06) 50%, rgba(0,0,0,0.35) 100%);
+      box-shadow: inset 0 0 30px rgba(0,0,0,0.4);
+      border-right: 1px solid rgba(201,162,39,0.08);
     }
+    .reel-column:last-child { border-right: none; }
     .reel-strip {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0.3em 0;
-      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      justify-content: flex-start;
+      min-height: 200vh;
+      padding: 0.2em 0;
+      font-size: clamp(0.9rem, 2.2vw, 1.4rem);
       color: var(--accent-gold);
       animation: reelScroll 28s linear infinite;
       white-space: nowrap;
     }
-    .reel-strip span { display: block; line-height: 1.4; }
+    .reel-strip span { display: block; line-height: 1.5; }
     .reel-column:nth-child(2) .reel-strip { animation-duration: 32s; }
     .reel-column:nth-child(3) .reel-strip { animation-duration: 24s; }
     .reel-column:nth-child(4) .reel-strip { animation-duration: 30s; }
     .reel-column:nth-child(5) .reel-strip { animation-duration: 26s; }
+    .reel-column:nth-child(6) .reel-strip { animation-duration: 29s; }
+    .reel-column:nth-child(7) .reel-strip { animation-duration: 25s; }
     @keyframes reelScroll {
       0% { transform: translateY(0); }
       100% { transform: translateY(-50%); }
@@ -482,6 +489,8 @@
     <div class="reel-column"><div class="reel-strip"><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span></div></div>
     <div class="reel-column"><div class="reel-strip"><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span></div></div>
     <div class="reel-column"><div class="reel-strip"><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span></div></div>
+    <div class="reel-column"><div class="reel-strip"><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span></div></div>
+    <div class="reel-column"><div class="reel-strip"><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span><span>★</span><span>▼</span><span>7</span><span>◆</span><span>●</span></div></div>
   </div>
   <header class="header" id="header" role="banner">
     <div class="header-inner">
