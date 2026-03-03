@@ -1,0 +1,16 @@
+---
+description: When user uploads logos and asks to crop and push to GitHub
+globs: assets/**/*.png,assets/**/*.jpg,crop_logo.ps1
+alwaysApply: false
+---
+
+# Логотипы: обрезка фона и пуш на GitHub
+
+Когда пользователь загружает логотипы в проект и просит обрезать фон и загрузить на GitHub:
+
+1. Запустить в корне проекта: `powershell -ExecutionPolicy Bypass -File .\crop_logo.ps1`
+2. Выполнить: `git add -A`, `git status`
+3. Закоммитить: `git commit -m "Crop logo backgrounds and add/update assets"`
+4. Запушить: `git push origin main`
+
+Скрипт обрабатывает все PNG/JPG в папке `assets` (обрезает фон, делает его прозрачным). Новые файлы можно просто класть в `assets` и снова запускать скрипт + пуш.
