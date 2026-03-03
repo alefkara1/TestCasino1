@@ -279,17 +279,30 @@
       border: 1px solid var(--border);
       transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
     }
-    .casino-card-logo {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      width: 110px;
-      height: auto;
-      max-height: 44px;
-      object-fit: contain;
-      object-position: top right;
+    .casino-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      min-height: 2.25rem;
+      margin-bottom: 0.5rem;
     }
-    .casino-card:has(.casino-card-logo) h3 { padding-right: 6.5rem; }
+    .casino-card-header h3 { margin: 0; flex-shrink: 0; }
+    .casino-card-logo-wrap {
+      flex: 1;
+      min-width: 0;
+      height: 2.25rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .casino-card-logo {
+      max-width: 100%;
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      object-position: right center;
+    }
     .casino-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
@@ -551,8 +564,12 @@
       <h2 id="top-heading">Top <span class="accent">Casinos</span> – Informational Ranking</h2>
       <div class="casinos-grid">
         <article class="casino-card fade-in">
-          <img class="casino-card-logo" src="assets/ludios-logo.png" alt="Ludios" width="110" height="44" loading="lazy">
-          <h3>Ludios</h3>
+          <div class="casino-card-header">
+            <h3>Ludios</h3>
+            <div class="casino-card-logo-wrap">
+              <img class="casino-card-logo" src="assets/ludios-logo.png" alt="Ludios" loading="lazy">
+            </div>
+          </div>
           <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span><span class="score">4.8/5</span></div>
           <p>Licensed operator with a broad game selection. This overview is for comparison; full details are available on the external review page.</p>
           <ul class="casino-features">
