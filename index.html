@@ -371,6 +371,10 @@
     .review-content .review-meta { list-style: none; margin: 0.5rem 0 0.75rem; padding: 0; }
     .review-content .review-meta li { margin-bottom: 0.35rem; padding-left: 0; }
     .review-content .review-meta strong { color: var(--text-primary); }
+    .review-rating { font-weight: 500; color: var(--accent-gold); font-size: 0.95em; margin-left: 0.35rem; }
+    .review-cta { display: inline-block; margin-top: 0.75rem; font-weight: 600; color: var(--accent-gold); }
+    .review-cta:hover { color: var(--accent-gold-light); }
+    .reviews-intro { text-align: center; color: var(--text-muted); max-width: 560px; margin: 0 auto 2rem; font-size: 0.95rem; line-height: 1.5; }
 
     .faq-item {
       background: var(--bg-card);
@@ -819,10 +823,10 @@
 
     <section id="reviews" aria-labelledby="reviews-heading">
       <h2 id="reviews-heading">Informational <span class="accent">Reviews</span></h2>
-      <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; max-width: 640px; margin-left: auto; margin-right: auto;">Each block links to an external review page. This site provides comparison only; we do not operate any casino.</p>
+      <p class="reviews-intro">Expand each block for a short overview. Links lead to the operator’s site. This site provides comparison only; we do not operate any casino.</p>
 
       <div class="review-block fade-in">
-        <button type="button" aria-expanded="false" aria-controls="review1" id="review1-btn">Ludios – Overview</button>
+        <button type="button" aria-expanded="false" aria-controls="review1" id="review1-btn">Ludios – Overview <span class="review-rating">4.8/5</span></button>
         <div id="review1" class="review-content" role="region" aria-labelledby="review1-btn" hidden>
           <p><a href="https://ludios-casino.com" target="_blank" rel="noopener noreferrer">Ludios</a></p>
           <ul class="review-meta">
@@ -831,10 +835,11 @@
             <li><strong>Bonus:</strong> welcome package and free spins</li>
           </ul>
           <p><strong>Description:</strong> A modern casino with a user-friendly interface, a wide slot catalogue and regular promotions for new and regular players.</p>
+          <p><a href="https://ludios-casino.com" class="review-cta" target="_blank" rel="noopener noreferrer">Visit Ludios →</a></p>
         </div>
       </div>
       <div class="review-block fade-in">
-        <button type="button" aria-expanded="false" aria-controls="review2" id="review2-btn">Blazebet – Overview</button>
+        <button type="button" aria-expanded="false" aria-controls="review2" id="review2-btn">Blazebet – Overview <span class="review-rating">4.7/5</span></button>
         <div id="review2" class="review-content" role="region" aria-labelledby="review2-btn" hidden>
           <p><a href="https://blazebet777.com" target="_blank" rel="noopener noreferrer">Blazebet</a></p>
           <ul class="review-meta">
@@ -843,10 +848,11 @@
             <li><strong>Bonus:</strong> first deposit bonuses</li>
           </ul>
           <p><strong>Description:</strong> A dynamic casino with a large selection of slot machines, easy navigation and quick access to popular games.</p>
+          <p><a href="https://blazebet777.com" class="review-cta" target="_blank" rel="noopener noreferrer">Visit Blazebet →</a></p>
         </div>
       </div>
       <div class="review-block fade-in">
-        <button type="button" aria-expanded="false" aria-controls="review3" id="review3-btn">GG.BET – Overview</button>
+        <button type="button" aria-expanded="false" aria-controls="review3" id="review3-btn">GG.BET – Overview <span class="review-rating">4.6/5</span></button>
         <div id="review3" class="review-content" role="region" aria-labelledby="review3-btn" hidden>
           <p><a href="https://gg.bet/uk-ua/casino" target="_blank" rel="noopener noreferrer">GG.BET</a></p>
           <ul class="review-meta">
@@ -855,10 +861,11 @@
             <li><strong>Bonus:</strong> bonuses for new players + cashback</li>
           </ul>
           <p><strong>Description:</strong> A well-known gaming platform with a casino section, combining betting, gambling and tournaments on popular slots.</p>
+          <p><a href="https://gg.bet/uk-ua/casino" class="review-cta" target="_blank" rel="noopener noreferrer">Visit GG.BET →</a></p>
         </div>
       </div>
       <div class="review-block fade-in">
-        <button type="button" aria-expanded="false" aria-controls="review4" id="review4-btn">Spinbetter – Overview</button>
+        <button type="button" aria-expanded="false" aria-controls="review4" id="review4-btn">Spinbetter – Overview <span class="review-rating">4.5/5</span></button>
         <div id="review4" class="review-content" role="region" aria-labelledby="review4-btn" hidden>
           <p><a href="https://spinbetter.com/ru" target="_blank" rel="noopener noreferrer">Spinbetter</a></p>
           <ul class="review-meta">
@@ -867,10 +874,11 @@
             <li><strong>Bonus:</strong> attractive welcome bonuses</li>
           </ul>
           <p><strong>Description:</strong> A casino with modern design, a wide choice of game providers and a convenient filter system.</p>
+          <p><a href="https://spinbetter.com/ru" class="review-cta" target="_blank" rel="noopener noreferrer">Visit Spinbetter →</a></p>
         </div>
       </div>
       <div class="review-block fade-in">
-        <button type="button" aria-expanded="false" aria-controls="review5" id="review5-btn">NV Casino – Overview</button>
+        <button type="button" aria-expanded="false" aria-controls="review5" id="review5-btn">NV Casino – Overview <span class="review-rating">4.4/5</span></button>
         <div id="review5" class="review-content" role="region" aria-labelledby="review5-btn" hidden>
           <p><a href="https://nvcasino.games/ru/" target="_blank" rel="noopener noreferrer">NV Casino</a></p>
           <ul class="review-meta">
@@ -879,10 +887,11 @@
             <li><strong>Bonus:</strong> various welcome offers</li>
           </ul>
           <p><strong>Description:</strong> A functional platform with a wide range of slots, fast payouts and convenient mobile adaptation.</p>
+          <p><a href="https://nvcasino.games/ru/" class="review-cta" target="_blank" rel="noopener noreferrer">Visit NV Casino →</a></p>
         </div>
       </div>
       <div class="review-block fade-in">
-        <button type="button" aria-expanded="false" aria-controls="review6" id="review6-btn">Hitnspin – Overview</button>
+        <button type="button" aria-expanded="false" aria-controls="review6" id="review6-btn">Hitnspin – Overview <span class="review-rating">4.3/5</span></button>
         <div id="review6" class="review-content" role="region" aria-labelledby="review6-btn" hidden>
           <p><a href="https://hitnspin.com/en/login" target="_blank" rel="noopener noreferrer">Hitnspin</a></p>
           <ul class="review-meta">
@@ -891,10 +900,11 @@
             <li><strong>Bonus:</strong> first deposit bonuses</li>
           </ul>
           <p><strong>Description:</strong> A modern casino with a diverse gaming community, excellent mobile optimisation and quick access to popular games.</p>
+          <p><a href="https://hitnspin.com/en/login" class="review-cta" target="_blank" rel="noopener noreferrer">Visit Hitnspin →</a></p>
         </div>
       </div>
       <div class="review-block fade-in">
-        <button type="button" aria-expanded="false" aria-controls="review7" id="review7-btn">Rollingslots – Overview</button>
+        <button type="button" aria-expanded="false" aria-controls="review7" id="review7-btn">Rollingslots – Overview <span class="review-rating">4.3/5</span></button>
         <div id="review7" class="review-content" role="region" aria-labelledby="review7-btn" hidden>
           <p><a href="https://rollingslots.com/en" target="_blank" rel="noopener noreferrer">Rollingslots</a></p>
           <ul class="review-meta">
@@ -903,10 +913,11 @@
             <li><strong>Bonus:</strong> welcome package and regular promotions</li>
           </ul>
           <p><strong>Description:</strong> A colourful casino with a large selection of slot machines, a focus on entertainment and easy navigation.</p>
+          <p><a href="https://rollingslots.com/en" class="review-cta" target="_blank" rel="noopener noreferrer">Visit Rollingslots →</a></p>
         </div>
       </div>
       <div class="review-block fade-in">
-        <button type="button" aria-expanded="false" aria-controls="review8" id="review8-btn">Verde – Overview</button>
+        <button type="button" aria-expanded="false" aria-controls="review8" id="review8-btn">Verde – Overview <span class="review-rating">4.2/5</span></button>
         <div id="review8" class="review-content" role="region" aria-labelledby="review8-btn" hidden>
           <p><a href="https://verdecasino.com/en" target="_blank" rel="noopener noreferrer">Verde Casino</a></p>
           <ul class="review-meta">
@@ -915,10 +926,11 @@
             <li><strong>Bonus:</strong> welcome bonuses + free spins</li>
           </ul>
           <p><strong>Description:</strong> A stylish casino with a wide selection of games, a convenient control panel and regular bonus offers.</p>
+          <p><a href="https://verdecasino.com/en" class="review-cta" target="_blank" rel="noopener noreferrer">Visit Verde →</a></p>
         </div>
       </div>
       <div class="review-block fade-in">
-        <button type="button" aria-expanded="false" aria-controls="review9" id="review9-btn">Greenluck – Overview</button>
+        <button type="button" aria-expanded="false" aria-controls="review9" id="review9-btn">Greenluck – Overview <span class="review-rating">4.2/5</span></button>
         <div id="review9" class="review-content" role="region" aria-labelledby="review9-btn" hidden>
           <p><a href="https://greenluck.casino" target="_blank" rel="noopener noreferrer">Greenluck Casino</a></p>
           <ul class="review-meta">
@@ -927,6 +939,7 @@
             <li><strong>Bonus:</strong> registration bonuses and player promotions</li>
           </ul>
           <p><strong>Description:</strong> A casino focused on user convenience, diverse game categories and attractive design.</p>
+          <p><a href="https://greenluck.casino" class="review-cta" target="_blank" rel="noopener noreferrer">Visit Greenluck →</a></p>
         </div>
       </div>
     </section>
