@@ -430,15 +430,24 @@
     footer {
       background: var(--bg-card);
       border-top: 1px solid var(--border);
-      padding: 2.5rem 1.5rem;
+      padding: 3rem 1.5rem 2.5rem;
       margin-top: 3rem;
     }
     .footer-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
-    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
-    .footer-links a { color: var(--text-muted); }
-    .footer-disclaimer { font-size: 0.85rem; color: var(--text-muted); max-width: 640px; margin: 0 auto 1rem; }
-    .footer-18 { color: var(--accent-gold); font-weight: 600; font-size: 0.9rem; }
-    .footer-copy { font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; }
+    .footer-brand { margin-bottom: 1.75rem; }
+    .footer-brand .logo-text { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
+    .footer-brand .logo-text .accent { color: var(--accent-gold); }
+    .footer-brand .tagline { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.35rem; }
+    .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem 1.75rem; margin-bottom: 1rem; }
+    .footer-nav a { color: var(--text-muted); font-size: 0.95rem; transition: color var(--transition); }
+    .footer-nav a:hover { color: var(--accent-gold-light); }
+    .footer-legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .footer-legal a { color: var(--text-muted); font-size: 0.9rem; }
+    .footer-legal a:hover { color: var(--accent-gold-light); }
+    .footer-divider { height: 1px; background: var(--border); max-width: 320px; margin: 0 auto 1.5rem; }
+    .footer-disclaimer { font-size: 0.85rem; color: var(--text-muted); max-width: 560px; margin: 0 auto 1rem; line-height: 1.5; }
+    .footer-18 { display: inline-block; color: var(--accent-gold); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; }
+    .footer-copy { font-size: 0.8rem; color: var(--text-muted); opacity: 0.9; }
 
     @media (max-width: 768px) {
       .nav-desktop { display: none; }
@@ -1091,13 +1100,25 @@
 
   <footer role="contentinfo">
     <div class="footer-inner">
-      <div class="footer-links">
+      <div class="footer-brand">
+        <a href="#home" class="logo-text">CasinoRank <span class="accent">Austria</span></a>
+        <p class="tagline">Comparison only. We do not operate a casino.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#home">Back to top</a>
+        <a href="#top">Top Casinos</a>
+        <a href="#comparison">Comparison</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="footer-legal">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms &amp; Conditions</a>
       </div>
-      <p class="footer-disclaimer">This site provides information and comparison only. We are not a casino. Links lead to external review pages. Gamble responsibly. 18+.</p>
-      <p class="footer-18">18+ | Responsible Gambling</p>
+      <div class="footer-divider" aria-hidden="true"></div>
+      <p class="footer-disclaimer">This site provides information and comparison only. We are not a casino. Links lead to external operator and review pages. Gamble responsibly. 18+.</p>
+      <p class="footer-18">18+ · Responsible Gambling</p>
       <p class="footer-copy">&copy; 2026 CasinoRank Austria. All rights reserved.</p>
     </div>
   </footer>
