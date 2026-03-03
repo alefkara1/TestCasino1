@@ -279,6 +279,27 @@
       border: 1px solid var(--border);
       transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
     }
+    .casino-card-header { position: relative; }
+    .casino-card-header h3 { margin-bottom: 0.5rem; }
+    .casino-card-header .rating { margin-bottom: 0.75rem; }
+    .casino-card-logo-wrap {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 45%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: stretch;
+      pointer-events: none;
+    }
+    .casino-card-logo-wrap img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: right center;
+    }
     .casino-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
@@ -540,8 +561,13 @@
       <h2 id="top-heading">Top <span class="accent">Casinos</span> – Informational Ranking</h2>
       <div class="casinos-grid">
         <article class="casino-card fade-in">
-          <h3>Ludios</h3>
-          <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span><span class="score">4.8/5</span></div>
+          <div class="casino-card-header">
+            <h3>Ludios</h3>
+            <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span><span class="score">4.8/5</span></div>
+            <div class="casino-card-logo-wrap">
+              <img src="assets/ludios-logo.png" alt="Ludios" loading="lazy">
+            </div>
+          </div>
           <p>Licensed operator with a broad game selection. This overview is for comparison; full details are available on the external review page.</p>
           <ul class="casino-features">
             <li>Welcome bonus: welcome package (see review)</li>
