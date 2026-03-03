@@ -272,11 +272,22 @@
       gap: 1.5rem;
     }
     .casino-card {
+      position: relative;
       background: var(--bg-card);
       border-radius: var(--radius-lg);
       padding: 1.75rem;
       border: 1px solid var(--border);
       transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+    .casino-card-logo {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 80px;
+      height: auto;
+      max-height: 36px;
+      object-fit: contain;
+      object-position: top right;
     }
     .casino-card:hover {
       transform: translateY(-6px);
@@ -284,6 +295,7 @@
       border-color: var(--accent-gold);
     }
     .casino-card h3 { font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-primary); }
+    .casino-card:has(.casino-card-logo) h3 { padding-right: 5.5rem; }
     .rating { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
     .stars { color: var(--accent-gold); font-size: 1rem; letter-spacing: 2px; }
     .score { color: var(--text-muted); font-size: 0.9rem; }
@@ -539,6 +551,7 @@
       <h2 id="top-heading">Top <span class="accent">Casinos</span> – Informational Ranking</h2>
       <div class="casinos-grid">
         <article class="casino-card fade-in">
+          <img class="casino-card-logo" src="assets/ludios-logo.png" alt="Ludios" width="80" height="36" loading="lazy">
           <h3>Ludios</h3>
           <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span><span class="score">4.8/5</span></div>
           <p>Licensed operator with a broad game selection. This overview is for comparison; full details are available on the external review page.</p>
