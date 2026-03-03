@@ -7,8 +7,8 @@ if (-not (Test-Path $assetsPath)) {
 # Обрабатываем все PNG и JPG в папке assets (в т.ч. новые загруженные логотипы)
 $logoFiles = @(Get-ChildItem -Path $assetsPath -File | Where-Object { $_.Extension -match '\.(png|jpe?g)$' } | Select-Object -ExpandProperty Name)
 
-# Порог: пиксели темнее этого считаются фоном (будут прозрачными)
-$bgThreshold = 55
+# Порог: пиксели темнее этого считаются фоном (будут прозрачными). 70 — чтобы убирать и тёмно-синий фон.
+$bgThreshold = 70
 
 foreach ($fileName in $logoFiles) {
   $path = Join-Path $assetsPath $fileName
