@@ -376,6 +376,8 @@
     .review-cta:hover { color: var(--accent-gold-light); }
     .reviews-intro { text-align: center; color: var(--text-muted); max-width: 560px; margin: 0 auto 2rem; font-size: 0.95rem; line-height: 1.5; }
 
+    .faq-intro { text-align: center; color: var(--text-muted); max-width: 560px; margin: 0 auto 1.5rem; font-size: 0.95rem; line-height: 1.5; }
+
     .faq-item {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -400,7 +402,8 @@
       transition: background var(--transition);
     }
     .faq-item button:hover { background: var(--bg-elevated); }
-    .faq-item .faq-icon { transition: transform var(--transition); color: var(--accent-gold); }
+    .faq-item button { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; text-align: left; }
+    .faq-item .faq-icon { flex-shrink: 0; transition: transform var(--transition); color: var(--accent-gold); font-size: 0.7rem; }
     .faq-item button[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
     .faq-answer { padding: 1rem 1.5rem 1.25rem; color: var(--text-muted); font-size: 0.95rem; border-top: 1px solid var(--border); }
 
@@ -411,6 +414,8 @@
       padding: 2rem;
     }
     .about-box p { color: var(--text-muted); margin-bottom: 1rem; }
+    .about-box .about-list { color: var(--text-muted); margin: 0 0 1rem 1.25rem; padding-left: 0.5rem; line-height: 1.6; }
+    .about-box .about-list li { margin-bottom: 0.35rem; }
     .about-box .notice {
       background: var(--accent-blue-soft);
       border-left: 4px solid var(--accent-blue);
@@ -955,28 +960,35 @@
 
     <section id="faq" aria-labelledby="faq-heading">
       <h2 id="faq-heading">Frequently Asked <span class="accent">Questions</span></h2>
+      <p class="faq-intro">Quick answers about legality, safety and how we work. For full terms always check the operator’s site.</p>
       <div class="faq-item fade-in">
-        <button type="button" aria-expanded="false" aria-controls="faq1" id="faq1-btn">Are online casinos legal in Austria?</button>
+        <button type="button" aria-expanded="false" aria-controls="faq1" id="faq1-btn">Are online casinos legal in Austria?<span class="faq-icon" aria-hidden="true">▼</span></button>
         <div id="faq1" class="faq-answer" hidden>
           Austrian law regulates gambling; licensed operators may offer services under certain conditions. Many sites accessible in Austria are licensed abroad (e.g. Malta, Curacao). Always verify that an operator holds a valid license and complies with applicable rules. This site is for informational comparison only.
         </div>
       </div>
       <div class="faq-item fade-in">
-        <button type="button" aria-expanded="false" aria-controls="faq2" id="faq2-btn">How to choose a safe online casino?</button>
+        <button type="button" aria-expanded="false" aria-controls="faq2" id="faq2-btn">How to choose a safe online casino?<span class="faq-icon" aria-hidden="true">▼</span></button>
         <div id="faq2" class="faq-answer" hidden>
           Look for a clear license from a recognised authority (e.g. MGA, UKGC), SSL encryption, and responsible gambling tools (deposit limits, self-exclusion). Compare reviews and terms before making any decision. We provide informational comparison only; we do not operate or endorse any casino.
         </div>
       </div>
       <div class="faq-item fade-in">
-        <button type="button" aria-expanded="false" aria-controls="faq3" id="faq3-btn">What licenses are trusted in Europe?</button>
+        <button type="button" aria-expanded="false" aria-controls="faq3" id="faq3-btn">What licenses are trusted in Europe?<span class="faq-icon" aria-hidden="true">▼</span></button>
         <div id="faq3" class="faq-answer" hidden>
           Commonly cited jurisdictions include the Malta Gaming Authority (MGA), UK Gambling Commission (UKGC), and Curacao. License information is usually in the website footer. Stronger regulators typically enforce stricter consumer protection. Always check the operator’s current license yourself.
         </div>
       </div>
       <div class="faq-item fade-in">
-        <button type="button" aria-expanded="false" aria-controls="faq4" id="faq4-btn">Is this website a gambling operator?</button>
+        <button type="button" aria-expanded="false" aria-controls="faq4" id="faq4-btn">Is this website a gambling operator?<span class="faq-icon" aria-hidden="true">▼</span></button>
         <div id="faq4" class="faq-answer" hidden>
           No. This website is for informational and comparison purposes only. We do not operate any casino, accept bets, or offer gambling. We present comparison information and link to external review pages. Any decision to use an operator is yours; gamble only if legal and responsible (18+).
+        </div>
+      </div>
+      <div class="faq-item fade-in">
+        <button type="button" aria-expanded="false" aria-controls="faq5" id="faq5-btn">Who can use this comparison?<span class="faq-icon" aria-hidden="true">▼</span></button>
+        <div id="faq5" class="faq-answer" hidden>
+          This site is for adults 18 and over. It is intended for readers who want to compare licensed operators in an editorial, neutral way. We do not encourage gambling. If you choose to play, do so only where legal and within your means; use deposit limits and seek help if needed.
         </div>
       </div>
     </section>
@@ -985,7 +997,14 @@
       <h2 id="about-heading">About This <span class="accent">Site</span></h2>
       <div class="about-box fade-in">
         <p>CasinoRank Austria is an informational and comparison website. We do not operate any casino, accept bets, or provide gambling services. Our goal is to help you compare licensed online casinos in an editorial, neutral way.</p>
-        <p>All information is for educational and comparison purposes only. We do not encourage gambling. Links on this site lead to external review pages (e.g. Tribuna.com casino reviews); we are not affiliated with those sites. Gambling can be addictive and involves financial risk. Only gamble if it is legal in your jurisdiction and you are 18 or older.</p>
+        <p><strong>This site provides:</strong></p>
+        <ul class="about-list">
+          <li>Comparison table (bonuses, license, payments, mobile, ratings)</li>
+          <li>Short reviews and links to operator sites</li>
+          <li>FAQ on legality, safety and how we work</li>
+          <li>External links for further reading — we are not affiliated with those sites</li>
+        </ul>
+        <p>All information is for educational and comparison purposes only. We do not encourage gambling. Gambling can be addictive and involves financial risk. Only gamble if it is legal in your jurisdiction and you are 18 or older.</p>
         <div class="notice">Responsible gambling: Set limits, never chase losses, and seek help if gambling becomes a problem. Resources include national support organisations and helplines. This website is for informational ranking and comparison only.</div>
         <span class="age">18+ only. Gambling can be harmful.</span>
       </div>
@@ -995,6 +1014,7 @@
   <footer role="contentinfo">
     <div class="footer-inner">
       <div class="footer-links">
+        <a href="#home">Back to top</a>
         <a href="#">Privacy Policy</a>
         <a href="#">Terms &amp; Conditions</a>
       </div>
